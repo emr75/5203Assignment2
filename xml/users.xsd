@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Start of Users Schema -->
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Start of User -->
+                <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Start of User Info-->
+                            <xs:element name="userInfo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="first" type="xs:string" />
+                                                    <xs:element name="last" type="xs:string" />  
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>  
+                                        <xs:element name="username" type="xs:string" minOccurs="0" />
+                                        <xs:element name="email" type="xs:string" />
+                                        <xs:element name="password" type="xs:string" />
+                                        <xs:element name="dob" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Start of Security Questions-->
+                            <xs:element name="securityQuestions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="question1" type="xs:string" />
+                                        <xs:element name="question2" type="xs:string" />
+                                        <xs:element name="question3" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- Attributes -->
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                        <xs:attribute name="userId" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="job" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <!-- End of User -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- End of Users Schema -->
+</xs:schema>

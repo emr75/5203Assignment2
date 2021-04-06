@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+
+    <!-- Start of Users -->
+
+    <user type="staff" userId="5201" job="developer">
+        <userInfo>
+            <name>
+                <first>Joe</first>
+                <last>Fresh</last>
+            </name>
+            <email>joeFresh@emails.com</email>
+            <password>j4kl32j4lk23</password>
+            <dob>05/03/1990</dob>
+        </userInfo>
+        <securityQuestions>
+            <question1>What is your paternal grandfather's name?</question1>
+            <question2>What was the name of your favourite teacher?</question2>
+            <question3>Where was your honeymoon?</question3>
+        </securityQuestions>
+    </user>
+
+    <user type="client" userId="00212">
+        <userInfo>
+            <name>
+                <first>Tammy</first>
+                <last>Kools</last>
+            </name>
+            <username>tammy2323</username>
+            <email>tammy2323@emails.com</email>
+            <password>h423jkl4hjk32h4</password>
+            <dob>03/03/1985</dob>
+        </userInfo>
+        <securityQuestions>
+            <question1>Where is your favourite travel destination?</question1>
+            <question2>What is your favourite hobby?</question2>
+            <question3>What was the name of your favourite teacher?</question3>
+        </securityQuestions>
+    </user>
+    <user type="staff" userId="5203" job="customerSupport">
+        <userInfo>
+            <name>
+                <first>Craig</first>
+                <last>Jeffers</last>
+            </name>
+            <email>craigjeffers@emails.com</email>
+            <password>h4kj32h4u</password>
+            <dob>11/08/1992</dob>
+        </userInfo>
+        <securityQuestions>
+            <question1>What did you want to be when you grew up?</question1>
+            <question2>Where was your honeymoon?</question2>
+            <question3>What is your paternal grandfather's name?</question3>
+        </securityQuestions>
+    </user>
+    
+    <user type="client" userId="00213">
+        <userInfo>
+            <name>
+                <first>Julie</first>
+                <last>Jakes</last>
+            </name>
+            <username>juliejackes</username>
+            <email>juliejackes@emails.com</email>
+            <password>3474932gfdgfd</password>
+            <dob>03/12/1990</dob>
+        </userInfo>
+        <securityQuestions>
+            <question1>What was the name of your favourite teacher?</question1>
+            <question2>Where was your honeymoon?</question2>
+            <question3>What is your paternal grandfather's name?</question3>
+        </securityQuestions>
+    </user>
+
+    <!-- Start of Users -->
+
+</users>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Start of Tickets Schema -->
+    <xs:element name="tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Start of Ticket -->
+                <xs:element name="ticket" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dateOfIssue" type="xs:dateTime" />
+                            <xs:element name="userId" type="xs:positiveInteger" />
+                            <!-- Start of Ticket Details -->
+                            <xs:element name="ticketDetails" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="subject" type="xs:string" />
+                                        <xs:element name="description" type="xs:string" />  
+                                        <!-- Start of Attachements -->
+                                        <xs:element name="attachments" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="img" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="src" use="required" type="xs:anyURI" />
+                                                                    <xs:attribute name="alt" use="required" type="xs:string" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element> 
+                            <!-- Start of Communications -->
+                            <xs:element name="communications" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Start of Messages -->
+                                        <xs:element name="message" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="date" type="xs:dateTime" use="required" />
+                                                        <xs:attribute name="userId" type="xs:positiveInteger" use="required" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Rest  of Ticket Elements -->
+                            <xs:element name="lastUpdated" type="xs:dateTime" />
+                            <xs:element name="dateResolved" type="xs:dateTime" minOccurs="0"/>
+                        </xs:sequence>
+                        <!-- Attributes-->
+                        <xs:attribute name="ticketId" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="priority" type="xs:string" />
+                        <xs:attribute name="status" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <!-- End of Ticket-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- End of Tickets Schema-->
+</xs:schema>

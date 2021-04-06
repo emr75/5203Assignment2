@@ -1,0 +1,204 @@
+/* Table of Contents */
+/* 1. Google Font */
+/* 2. Global Changes */
+/* 3. Header */
+/* 3.1 Nav */
+/* 4. Main */
+/* 4.1 Section 1 */
+/* 4.2 Section 2 */
+/* 4.3 Section 3 */
+/* 4.4 Section 4 */
+/* 5. Footer */
+/* 6. Media Queries */
+/* 6.1 MediaQuery: Split Screen */
+/* 6.2 MediaQuery: Tablet */
+/* 6.3 MediaQuery: Mobile */
+
+
+/* 1. Google Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+    --bgC: linear-gradient(#1a1a60, #5d2573);;
+}
+/* 2. Global Changes */
+
+html {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+body {
+    background-image: var(--bgC);
+    font: normal 1.5em/2.8em "Poppins", "sans-serif";
+    color: black;
+}
+tbody {
+    width: 94%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+/* p {
+    font-size: 1.4em;
+} */
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+.loginForm {
+    background-color: #f5f5dc40;
+    margin: 14% 25%;
+    width: 50%;
+    border-radius: 2em;
+    padding: 2em 0 1em 0;
+    box-shadow: 2px 10px 10px 4px #00000040;
+}
+#messageForm {
+    width: 60%;
+    margin: 14% 20%;
+}
+.ticketList {
+    justify-content: center;
+}
+#column {
+    flex-direction: column;
+}
+.tktHeading{
+    display: flex;
+    justify-content: space-between;
+    margin: 9% 0 0 0;
+    padding: 0 8%;
+    background: #f5f5dc40;
+}
+.tktInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 40em;
+    box-shadow: 2px 10px 10px 4px #00000040;
+    margin: 3% 0 0 8%;
+    padding: 0 1em;
+    background: #f5f5dc40;
+    border-radius: 2em;
+}
+#tktData {
+    margin: 0 0 47%;
+}
+.tktDetailTable {
+    width: auto;
+    margin: 3%;
+}
+nav, footer {
+    height: 4em;
+    justify-content: space-between;
+    background-color: #f5f5dc40;
+}
+nav img {
+    width: 4em;
+    padding: 0.2em;
+}
+nav ul {
+    padding: 0 1.5em 0 0;
+    justify-content: space-between;
+    width: 15em;
+    align-items: center;
+}
+input {
+    width: 90%;
+    height: 3.5em;
+}
+#messageDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4%;
+}
+textarea {
+    font-size: 1em;
+}
+.inputDiv {
+    text-align: center;
+}
+.submit {
+    width: 9em;
+    margin: 2% 38%;
+    font: inherit;
+    height: 3em;
+    font-size: medium;
+    border: none;
+    background-color: #0000008a;
+    color: white;
+    padding-bottom: 4em;
+    border-radius: 2em;
+    margin: 2% 38%;
+}
+.newTicket {
+    width: 22%;
+    display: block;
+    margin: 6% auto;
+    text-align: center;
+}
+footer ul {
+    justify-content: space-between;
+    padding: 0.8em;
+}
+
+@media only screen and (max-width:970px) {
+
+    /* Split Screen Rules */
+}
+
+/* 6.2 MediaQuery: Tablet */
+
+@media only screen and (max-width:768px) {
+    
+    /* Tablet CSS Rules */
+
+}
+
+
+/* 6.3 MediaQuery: Mobile */
+
+@media only screen and (max-width:480px) {
+
+/* Mobile CSS Rules */
+.flexContainer {
+    flex-direction: column;
+}
+    nav {
+        height: 13em;
+        align-items: center;
+    }
+    nav img {
+        padding: 0;
+    }
+    nav ul {
+        padding-left: 1.2em;
+    }
+    .loginForm {
+        margin: auto;
+        margin: 3em 0;
+        width: 100%;
+        padding: 0;
+    }
+    input[type=submit] {
+        margin: 2% 31%;
+    }
+    footer {
+        height: 10em;
+        text-align: center;
+    }
+
+}
