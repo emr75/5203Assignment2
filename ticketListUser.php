@@ -21,11 +21,12 @@ for($i = 0; $i < $length; $i++) {
     // $rows .= '<td>'.$b->userId. '</td>';
     $rows .= '<td>'.$tickets[$i]->ticketDetails->subject. '</td>';
     $rows .= '<td>'.$tickets[$i]->attributes()['status']. '</td>';
+    $rows .= "<td><a href='ticketDetails.php?id={$tickets[$i]->attributes()['ticketId']}'/>More</a></td>";
     $rows .= '</tr>';
     }
 }
-
-
+// <a href="ticketDetails.php?id=$tickets[$i]->userId">
+// <a href='./view_simple_client.php?tid=".$doc->supportticket[$i]->tid."'
 $dom = dom_import_simplexml($doc)->ownerDocument;
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;

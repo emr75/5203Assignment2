@@ -74,7 +74,8 @@ a {
 .ticketList {
     justify-content: center;
 }
-#column {
+.column {
+    display: flex;
     flex-direction: column;
 }
 .tktHeading{

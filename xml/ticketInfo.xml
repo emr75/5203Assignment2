@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
+
+    <!-- Start of Tickets -->
+
+    <ticket ticketId="01" priority="low" status="on-going">
+        <!-- Date -->
+        <dateOfIssue>2021-01-03T14:25:00</dateOfIssue>
+        <userId>00212</userId>
+        <ticketDetails>
+            <subject>My resubscribe button is not working</subject>
+            <description><![CDATA[ When a user tries to resubscribe to my blog, they can't use the resubscribe button form email. They ahve to go to my website ]]></description>
+            <attachments>
+                <img src="#" alt="picture of resubscribe button in newsletter"/>
+            </attachments>
+        </ticketDetails>
+        <communications>
+            <message date="2021-01-03T14:30:00" userId="5203"><![CDATA[ Hi Tammy, my name is Craig. I can help you with this. Can you give me your blog's name?]]></message>
+            <message date="2021-01-07T16:30:00" userId="00212"><![CDATA[ Hi Craig, yes, my blog is tammyturfs.com.]]></message>
+            <message date="2021-01-07T16:40:00" userId="5203"><![CDATA[ Great. Now could you give me your mailchimp username?]]></message>
+        </communications>
+        <lastUpdated>2021-01-10T12:40:34</lastUpdated>
+    </ticket>
+
+    <ticket ticketId="02" priority="high" status="resolved">
+        <dateOfIssue>2021-01-10T02:30:20</dateOfIssue>
+        <userId>00213</userId>
+        <ticketDetails>
+            <subject>Unable to Access Account</subject>
+            <description><![CDATA[ Hi there, I am unable to get back into my account. I tried resetting my password but did not get the verificatioon email.]]></description>
+            <attachments/>
+        </ticketDetails>
+        <communications>
+            <message date="2021-01-10T02:40:00" userId="5201"><![CDATA[ Hi Julie, my name is Joe. I can help you with this. Can you give me your blog's name?]]></message>
+            <message date="2021-01-10T09:30:00" userId="00213"><![CDATA[ Hi Joe, yes, my blog is juliesjules.com.]]></message>
+            <message date="2021-01-10T10:00:00" userId="5201"><![CDATA[ Hi Julie, I've just reviewed your account and found that you have another email on file. Is it possible the verification went to juliesjules@emails.com]]></message>
+            <message date="2021-02-02T12:40:00" userId="00213"><![CDATA[ Hi Joe, my mistake, you are correct. It went to my other email. Thanks!]]></message>
+        </communications>
+        <lastUpdated>2021-02-02T12:40:34</lastUpdated>
+        <dateResolved>2021-02-02T12:40:34</dateResolved>
+    </ticket>
+
+    <ticket ticketId="03" priority="high" status="resolved">
+        <dateOfIssue>2021-02-01T12:30:32</dateOfIssue>
+        <userId>00212</userId>
+        <ticketDetails>
+            <subject>Cancel Subscription</subject>
+            <description><![CDATA[ Hi I have a subscriber that is trying to cancel their susbscription but says the cancel button is not working.]]></description>
+            <attachments><img src="#" alt="picture of cancel subscription button"/></attachments>
+        </ticketDetails>
+        <communications>
+            <message date="2021-02-01T12:40:50" userId="5201"><![CDATA[ Hi Tammy, my name is Joe. I can help you with this. Can you give me your blog's name?]]></message>
+            <message date="2021-02-02T13:30:34" userId="00212"><![CDATA[ Hi Joe, yes, my blog is tammyturfs.com.]]></message>
+            <message date="2021-02-02T14:00:32" userId="5201"><![CDATA[ Great. I've just reviewed your page and fixed the cancel button. Let me know if you ahve any mroe issues with it.]]></message>
+        </communications>
+        <lastUpdated>2021-02-02T14:00:32</lastUpdated>
+        <dateResolved>2021-02-02T14:00:32</dateResolved>
+    </ticket>
+
+    <ticket ticketId="04" priority="low" status="on-going">
+        <dateOfIssue>2021-02-03T02:30:32</dateOfIssue>
+        <userId>00213</userId>
+        <ticketDetails>
+            <subject>Subscribers can't access Paypal</subject>
+            <description><![CDATA[ Hi there, some of my subscribers are having issues using Paypal to subscribe to my channel.]]></description>
+            <attachments/>
+        </ticketDetails>
+        <communications>
+            <message date="2021-02-03T02:40:32" userId="5203"><![CDATA[ Hi Julie, my name is Craig. Unfortunately, Paypal can only be used as a method of payment in the USA. That may be why only some 
+                of your subscribers ar having this issue.]]></message>
+            <message date="2021-02-04T09:30:32" userId="00213"><![CDATA[ Hi Joe, I think one of them is from te US actually.]]></message>
+            <message date="2021-02-04T10:00:43" userId="5203"><![CDATA[ Hi Julie, please get the to contact us at support and we'll be able to guide them.]]></message>
+            <message date="2021-02-04T12:40:32" userId="00213"><![CDATA[ Hi Joe, I will tell them and put it on my blog. Do you know when Paypal will be availble internationally? ]]></message>
+        </communications>
+        <lastUpdated>2021-01-04T17:23:11</lastUpdated>
+    </ticket>
+
+    <!-- End of Tickets -->
+
+</tickets>
