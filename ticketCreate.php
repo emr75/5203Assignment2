@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Global Ticket System</title>
-    <!-- <script src="./js/script.js" async defer></script> -->
+
 </head>
 <body>
     <main>

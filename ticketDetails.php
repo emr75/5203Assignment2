@@ -69,14 +69,13 @@ $rows1 .= '</tr>';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Global Ticket System</title>
-    <!-- <script src="./js/script.js" async defer></script> -->
 </head>
 <body>
     <main>
         <nav class="flexContainer">
           <a href="#"><img src="./Images/globe-1334084_1280.png" alt=""></a>
             <ul class="flexContainer">
-                <li><a href="#">Login</a></li>
+                <li><a href="./logout.php">Logout</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Help</a></li>
             </ul>
@@ -123,7 +122,7 @@ $rows1 .= '</tr>';
     </main>
     <footer>
       <ul class="flexContainer">
-        <li><a href="#">Login</a></li>
+        <li><a href="./logout.php">Logout</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Help</a></li>
     </ul>

@@ -24,17 +24,6 @@ if(isset($_POST['login'])) {
     } else {
       echo "Invalid credentials";      
     }
-  //   if (!$i++)
-  // // creaste a session variable if valid
-  // if($user == $dbadmin && $pass == $dbadminp){
-  //   $_SESSION['username'] = $user;
-  //   header('Location: ticketListAdmin.php');
-  // } else if($user == $dbuser && $pass == $dbuserp){
-  //   $_SESSION['username'] = $user;
-  //   header('Location: ticketListUser.php');
-  // } {
-  //   echo "invalid credentials";
-
 }}
 ?><!DOCTYPE html>
 <html lang="en">
@@ -44,7 +33,6 @@ if(isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Global Ticket System</title>
-    <!-- <script src="./js/script.js" async defer></script> -->
 </head>
 <body>
     <main>
