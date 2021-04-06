@@ -24,6 +24,25 @@ for($i = 0; $i < $length; $i++)  {
     $rows .= '</tr>';
     }
 }
+$time = new DateTime();
+$result = $time->format('Y-m-d\TH:i:s');
+
+if(isset($_POST['msg'])){
+  if($_POST['message'] != "" || $_POST['message'] !=null) {
+    $newMsg = $_POST['message'];
+    for($t = 0; $t < $length; $t++) {
+    if ($tickets[$t]->attributes()['ticketId'] == $_SESSION['ticketId']) {
+    $message = $tickets[$t]->communications->addChild('message', $newMsg);
+    $message->addAttribute('date', $result);
+    $message->addAttribute('userId', $tickets[$t]->userId);
+    $dom = dom_import_simplexml($doc)->ownerDocument;
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->save("./xml/tickets.xml");  
+    }
+  }
+}
+}
 for($i = 0; $i < $length; $i++)  {
   if ($tickets[$i]->attributes()['ticketId'] == $_SESSION['ticketId']) {
     for($t = 0; $t < $length; $t++) {
@@ -34,26 +53,13 @@ for($i = 0; $i < $length; $i++)  {
     }
   }
 }
-$time = new DateTime();
-$result = $time->format('Y-m-d H:i:s');
-
 if(isset($_POST['msg'])){
-  if($_POST['message'] != "" || $_POST['message'] !=null) {
-    $newMsg = $_POST['message'];
-    for($t = 0; $t < $length; $t++) {
-    if ($tickets[$t]->attributes()['ticketId'] == $_SESSION['ticketId']) {
-    $message = $tickets[$t]->communications->addChild('message', $newMsg);
-    $message->addAttribute('date', $result);
-    $message->addAttribute('userId', $tickets[$t]->userId);
-    
-    $dom = dom_import_simplexml($doc)->ownerDocument;
-    $dom->preserveWhiteSpace = false;
-    $dom->formatOutput = true;
-    $dom->save("./xml/tickets.xml");
-    }
-  }
-  }
+$rows1 .= '<tr class="tktInfo">';
+$rows1 .= '<td>'.$message.'</td>';
+$rows1 .= '<td>'.$message->attributes()['date']. '</td>';
+$rows1 .= '</tr>';
 }
+
 
 ?><!DOCTYPE html>
 <html lang="en">
