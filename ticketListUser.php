@@ -5,8 +5,6 @@ if(!isset($_SESSION['username'])) {
     header('Location: login.php');
 }
 
-$_SESSION['username'] = $_POST['username'];
-
 $rows = '';
 $doc = simplexml_load_file("./xml/tickets.xml");
 
@@ -18,7 +16,7 @@ $doc = simplexml_load_file("./xml/tickets.xml");
 $length = count($doc->children());
 $tickets = $doc->children();
 for($i = 0; $i < $length; $i++) {
-    if ($tickets[$i]->userId == '00212') {
+    if ($tickets[$i]->userId == $_SESSION['userId']) {
     $rows .= '<tr>';
     // $rows .= '<td>'.$b->userId. '</td>';
     $rows .= '<td>'.$tickets[$i]->ticketDetails->subject. '</td>';

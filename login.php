@@ -1,29 +1,30 @@
 <?php
+set_error_handler("var_dump");
 session_start();
+$userXML = simplexml_load_file("./xml/users.xml");
+$username = "";
+$pass = "";
 if(isset($_POST['login'])) {
   //getting values from the user
-  $userXML = simplexml_load_file("./xml/users.xml");
-  $user = $userXML->children();
-  $user = $_POST['username'];
+  $username = $_POST['username'];
   $pass = $_POST['password'];
-
-  // $dbadmin = 'elle';
-  // $dbadminp = 'walk';
-  // $dbuser = 'laura';
-  // $dbuserp = 'water';
-
   $length = count($userXML->children());
   for($i = 0; $i < $length; $i++){
-    if ($user[$i]->userInfo->email = $user && $user[$i]->userInfo->password = $pass) {
-      $_SESSION['userId'] = (string)$users->user[$i]->attributes()['userId'];
-      if ($users->user[$i]->attributes()['type'] == 'staff') {
-        header('Location: ticketListAdmin.php');
-      } else if ($users->user[$i]->attributes()['type'] == 'client') {
-        header('Location: ticketListUser.php');        
-      }
-    } else if (!$i++){
+    if ($userXML->user[$i]->userInfo->email == $username && $userXML->user[$i]->userInfo->password == $pass) {
+      $_SESSION['userId'] = (string) $userXML->user[$i]->attributes()['userId'];
+      if ($userXML->user[$i]->attributes()['type'] == 'client'){
+        // var_dump($userXML->user[$i]->userInfo->email);
+        // var_dump($userXML->user[$i]->userInfo->password);
+        $_SESSION['username'] = $username;
+        header("Location: ticketListUser.php");
+      } else {
+        $_SESSION['username'] = $username;
+        header("Location: ticketListAdmin.php");
+      } 
+    } else {
       echo "Invalid credentials";      
     }
+  //   if (!$i++)
   // // creaste a session variable if valid
   // if($user == $dbadmin && $pass == $dbadminp){
   //   $_SESSION['username'] = $user;
@@ -33,12 +34,9 @@ if(isset($_POST['login'])) {
   //   header('Location: ticketListUser.php');
   // } {
   //   echo "invalid credentials";
-  // }
-  }
-}
-?>
 
-<!DOCTYPE html>
+}}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
