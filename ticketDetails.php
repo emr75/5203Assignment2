@@ -5,6 +5,7 @@ if(!isset($_SESSION['username'])) {
 }
 $rows = '';
 $rows1 = '';
+$message = '';
 $doc = simplexml_load_file("./xml/tickets.xml");
 
 // print $doc->book->author[0]->attributes()['title'];
@@ -27,17 +28,33 @@ for($i = 0; $i < $length; $i++)  {
   if ($tickets[$i]->attributes()['ticketId'] == $_SESSION['ticketId']) {
     for($t = 0; $t < $length; $t++) {
       $rows1 .= '<tr class="tktInfo">';
-    $rows1 .= '<td>'.$tickets[$i]->communications->message[$t].'</td>';
-    $rows1 .= '<td>'.$tickets[$i]->communications->message[$t]->attributes()['date']. '</td>';
-    $rows1 .= '</tr>';
+      $rows1 .= '<td>'.$tickets[$i]->communications->message[$t].'</td>';
+      $rows1 .= '<td>'.$tickets[$i]->communications->message[$t]->attributes()['date']. '</td>';
+      $rows1 .= '</tr>';
     }
   }
 }
+$time = new DateTime();
+$result = $time->format('Y-m-d H:i:s');
 
-$dom = dom_import_simplexml($doc)->ownerDocument;
-$dom->preserveWhiteSpace = false;
-$dom->formatOutput = true;
-$dom->save("./xml/ticketInfo.xml");
+if(isset($_POST['msg'])){
+  if($_POST['message'] != "" || $_POST['message'] !=null) {
+    $newMsg = $_POST['message'];
+    for($t = 0; $t < $length; $t++) {
+    if ($tickets[$t]->attributes()['ticketId'] == $_SESSION['ticketId']) {
+    $message = $tickets[$t]->communications->addChild('message', $newMsg);
+    $message->addAttribute('date', $result);
+    $message->addAttribute('userId', $tickets[$t]->userId);
+    
+    $dom = dom_import_simplexml($doc)->ownerDocument;
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->save("./xml/tickets.xml");
+    }
+  }
+  }
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +111,7 @@ $dom->save("./xml/ticketInfo.xml");
               <label for="message">Create a New Ticket</label>
               <textarea type="message" name="message" id="message" placeholder="Message" rows="10" cols="50"></textarea>
             </div>
-              <input type="submit" class="submit" value="Submit"> 
+              <input type="submit" name="msg" class="submit" value="Submit"> 
           </form>
       </div>
     </main>

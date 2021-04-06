@@ -19,7 +19,7 @@
             <message date="2021-01-07T16:30:00" userId="00212"><![CDATA[ Hi Craig, yes, my blog is tammyturfs.com.]]></message>
             <message date="2021-01-07T16:40:00" userId="5203"><![CDATA[ Great. Now could you give me your mailchimp username?]]></message>
         </communications>
-        <lastUpdated>2021-01-10T12:40:34</lastUpdated>
+            <lastUpdated>2021-01-10T12:40:34</lastUpdated>
     </ticket>
 
     <ticket ticketId="02" priority="high" status="resolved">
@@ -35,7 +35,7 @@
             <message date="2021-01-10T09:30:00" userId="00213"><![CDATA[ Hi Joe, yes, my blog is juliesjules.com.]]></message>
             <message date="2021-01-10T10:00:00" userId="5201"><![CDATA[ Hi Julie, I've just reviewed your account and found that you have another email on file. Is it possible the verification went to juliesjules@emails.com]]></message>
             <message date="2021-02-02T12:40:00" userId="00213"><![CDATA[ Hi Joe, my mistake, you are correct. It went to my other email. Thanks!]]></message>
-        </communications>
+        <message date="2021-04-06T13:05:41" userId="00213">oioioioioi</message></communications>
         <lastUpdated>2021-02-02T12:40:34</lastUpdated>
         <dateResolved>2021-02-02T12:40:34</dateResolved>
     </ticket>
